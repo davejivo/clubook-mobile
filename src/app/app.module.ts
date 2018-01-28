@@ -6,19 +6,24 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CardsPage } from '../pages/cards/cards';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpClientModule } from '@angular/common/http';
+import { RestProvider } from '../providers/rest/rest';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    CardsPage
+    CardsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -26,12 +31,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    CardsPage
+    CardsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestProvider
   ]
 })
 export class AppModule {}

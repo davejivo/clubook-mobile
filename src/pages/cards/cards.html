@@ -15,7 +15,35 @@
   <button ion-button secondary menuToggle>פתח תפריט</button>
 <ion-content padding>
 
-   <ion-card>
+
+  <ion-list inset>
+    <ion-item *ngFor="let user of users">
+      <h2>{{user.name}}</h2>
+      <p>{{user.email}}</p>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-card (click)="chooseCard()">
+        <img src="assets/imgs/leumi-card.jpeg"/>
+        <div class="card-title">Madison</div>
+        <div class="card-subtitle">28 Listings</div>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card (click)="chooseCard()">
+        <img src="assets/imgs/leumi-card.jpeg"/>
+        <div class="card-title">Madison</div>
+        <div class="card-subtitle">28 Listings</div>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+   <ion-card (click)="chooseCard()">
     <img width="80" height="200" src="assets/imgs/leumi-card.jpeg"/>
     <div class="card-title">Madison</div>
     <div class="card-subtitle">28 Listings</div>

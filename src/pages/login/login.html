@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>התחבר</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+  <h3>Ionic Menu Starter</h3>
+
+
+  <button ion-button secondary menuToggle>פתח תפריט</button>
+<ion-content padding>
+
+
+  <ion-searchbar
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+  <ion-list >
+    <ion-item *ngFor=" let company of companies; let idx = index " [class.selected]="idx === currentSelected" (click)="onItemClicked(idx)">
+      {{ company }}
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label floating>משתמש</ion-label>
+    <ion-input type="text" [(ngModel)]="user.user"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>סיסמה</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="login(user)">Login</button>
+  
+  </ion-content>
