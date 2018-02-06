@@ -25683,21 +25683,53 @@ page-cards ion-card {
   text-align: center;
 }
 
+page-cards h1 {
+  font-size: 5rem;
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+page-cards h3 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+page-cards .card-roling {
+  height: 500px;
+  min-height: 500px;
+  font-size: 2.0em;
+  width: 80%;
+  font-weight: bold;
+  color: #111;
+  background-color: #eee;
+}
+
+page-cards .card-image {
+  width: 145px;
+  height: 85px;
+  max-width: 145px;
+  max-height: 85px;
+  font-weight: bold;
+  color: #111;
+}
+
 page-cards .card-title {
-  position: absolute;
   top: 36%;
   font-size: 2.0em;
   width: 100%;
   font-weight: bold;
-  color: #fff;
+  color: #111;
 }
 
 page-cards .card-subtitle {
   font-size: 1.0em;
-  position: absolute;
   top: 52%;
   width: 100%;
-  color: #fff;
+  color: #111;
 }
 
 page-login ion-login {

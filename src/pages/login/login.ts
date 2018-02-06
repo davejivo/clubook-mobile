@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { CardsPage } from '../cards/cards';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { RestProvider } from '../../providers/rest/rest';
 export class LoginPage {
 	user: any;
   companies: any;
+  token: any;
 
   constructor(public navCtrl: NavController, public restProvider: RestProvider) {
   //	this.companies = [
@@ -34,6 +36,17 @@ export class LoginPage {
       "ELEC" , 
       "ELAL"
     ]
+  }
+
+  login (loginUser: any){
+     this.user = loginUser;
+    console.log ("loginUser is user:" + loginUser.user + " password: " + loginUser.password) ;
+     this.restProvider.login(loginUser.user,loginUser.password)
+    .then(data => {
+      this.token = data;
+      console.log('response: ' + data);
+    });
+    this.navCtrl.push(CardsPage , {token:this.token});
   }
 
   onInput(ev: any) {

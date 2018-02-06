@@ -4,5 +4,9 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [{
+    "path": "/api",
+    "proxyUrl": "https://fathomless-thicket-58677.herokuapp.com/api"
+  }]
 }
