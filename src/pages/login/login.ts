@@ -45,8 +45,9 @@ export class LoginPage {
     .then(data => {
       this.token = data;
       console.log('response: ' + data);
+      this.navCtrl.push(CardsPage , {token:this.token});
     });
-    this.navCtrl.push(CardsPage , {token:this.token});
+    
   }
 
   onInput(ev: any) {

@@ -25678,28 +25678,55 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.background, .background .pane, .background .item, .background .item-complex .item-content {
+  background-color: #eff3f7 !important;
+}
+
+page-cards ion-scroll {
+  white-space: nowrap;
+  height: 500px;
+}
+
+page-cards .ion-grid-limited {
+  height: 200px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-cards .flat-image {
+  width: 145px;
+  height: 85px;
+  max-width: 145px;
+  max-height: 85px;
+  font-weight: bold;
+  color: #111;
+}
+
+page-cards h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 600;
+}
+
+page-cards h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
 page-cards ion-card {
   position: relative;
   text-align: center;
 }
 
-page-cards h1 {
-  font-size: 5rem;
-  text-align: right;
-  padding: 0px;
-  margin: 0px;
-}
-
-page-cards h3 {
-  margin-top: 1rem;
-  font-size: 3rem;
-  text-align: right;
-  padding: 0px;
-  margin: 0px;
-}
-
 page-cards .card-roling {
-  height: 500px;
+  height: 600px;
   min-height: 500px;
   font-size: 2.0em;
   width: 80%;
@@ -25719,7 +25746,7 @@ page-cards .card-image {
 
 page-cards .card-title {
   top: 36%;
-  font-size: 2.0em;
+  font-size: 1.0em;
   width: 100%;
   font-weight: bold;
   color: #111;
