@@ -66,14 +66,14 @@
         <ion-grid >
           <ion-row>
 
-            <ion-col col-3 *ngFor="let benefit of benefits">
+            <ion-col col-3 *ngFor="let benefit of benefits, let i = index">
 
               <div style="text-align: center; padding: 1px; background-color: #eee">
-                  <ion-card (click)="chooseCard()">
+                  <ion-card  id="card{{i}}" (click)="chooseCard(i)" >
                   <!-- img src="assets/imgs/leumi-card.jpeg"/ -->
                   <img class="card-image" src="assets/imgs/logo-small.png"/>
 
-                  <div class="card-title">{{benefit.club.name}}</div>
+                  <div class="card-title" id="cardTitle{{i}}" >{{benefit.club.name}}</div>
                   <!-- div class="card-subtitle">{{benefit.description}}</div -->
                    </ion-card>
               </div>
