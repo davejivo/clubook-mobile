@@ -1,5 +1,9 @@
 page-cards {
   
+   .mainContent {
+    background-color: color($colors, background, base);
+  }
+  
   ion-scroll {
     white-space: nowrap;
     height: 500px; // better to calculate the device height and set it offsetting the bottom StatusBar or margin, etc.

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController , NavParams} from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+import { BenefitsPage } from '../benefits/benefits';
 
 
 @Component({
@@ -41,7 +42,7 @@ export class CardsPage {
       card.className = card.className.replace(" card-z-depth-5", "");
 
     }else{
-      alert ("chooseCard: " + index + " card: " +this.benefits [index].club.name);
+      //alert ("chooseCard: " + index + " card: " +this.benefits [index].club.name);
       this.selectedBenefits.push (this.benefits [index]);
       card.className+=' card-z-depth-5';
     }
@@ -58,6 +59,16 @@ export class CardsPage {
       this.benefits = data;
       console.log('benefits: ' + this.benefits);
     });
+  }
+
+  navigateToBenefits (){
+   // let sentElements = [];
+    //this.selectedBenefits.forEach(element => {
+      //let benefit = benefits [];
+    //console.log(product);
+
+    //});
+    this.navCtrl.push(BenefitsPage , {selectedBenefits:this.selectedBenefits});
   }
 
 }

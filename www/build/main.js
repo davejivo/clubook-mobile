@@ -40,8 +40,8 @@ webpackEmptyAsyncContext.id = 155;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__cards_cards__ = __webpack_require__(200);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -103,7 +103,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>התחבר</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n  <h3>Ionic Menu Starter</h3>\n\n\n  <button ion-button secondary menuToggle>פתח תפריט</button>\n<ion-content padding>\n\n\n  <!-- ion-searchbar\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n  <ion-list >\n    <ion-item *ngFor=" let company of companies; let idx = index " [class.selected]="idx === currentSelected" (click)="onItemClicked(idx)">\n      {{ company }}\n    </ion-item>\n  </ion-list -->\n\n  <ion-item>\n    <ion-label floating>משתמש</ion-label>\n    <ion-input type="text" [(ngModel)]="user.user"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>סיסמה</ion-label>\n    <ion-input type="password" [(ngModel)]="user.password"></ion-input>\n  </ion-item>\n\n  <button ion-button (click)="login(user)">Login</button>\n  \n  </ion-content>\n'/*ion-inline-end:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/login/login.html"*/
+            selector: 'page-login',template:/*ion-inline-start:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/login/login.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>התחבר</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n  <h3>Ionic Menu Starter</h3>\n\n\n  <button ion-button secondary menuToggle>פתח תפריט</button>\n<ion-content padding class="mainContent">\n\n\n  <!-- ion-searchbar\n  [showCancelButton]="shouldShowCancel"\n  (ionInput)="onInput($event)"\n  (ionCancel)="onCancel($event)">\n</ion-searchbar>\n  <ion-list >\n    <ion-item *ngFor=" let company of companies; let idx = index " [class.selected]="idx === currentSelected" (click)="onItemClicked(idx)">\n      {{ company }}\n    </ion-item>\n  </ion-list -->\n\n  <ion-item>\n    <ion-label floating>משתמש</ion-label>\n    <ion-input type="text" [(ngModel)]="user.user"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>סיסמה</ion-label>\n    <ion-input type="password" [(ngModel)]="user.password"></ion-input>\n  </ion-item>\n\n  <button ion-button (click)="login(user)">Login</button>\n  \n  </ion-content>\n'/*ion-inline-end:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/login/login.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
     ], LoginPage);
@@ -120,8 +120,9 @@ var LoginPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__benefits_benefits__ = __webpack_require__(201);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -131,6 +132,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -158,7 +160,7 @@ var CardsPage = (function () {
             card.className = card.className.replace(" card-z-depth-5", "");
         }
         else {
-            alert("chooseCard: " + index + " card: " + this.benefits[index].club.name);
+            //alert ("chooseCard: " + index + " card: " +this.benefits [index].club.name);
             this.selectedBenefits.push(this.benefits[index]);
             card.className += ' card-z-depth-5';
         }
@@ -173,14 +175,21 @@ var CardsPage = (function () {
             console.log('benefits: ' + _this.benefits);
         });
     };
+    CardsPage.prototype.navigateToBenefits = function () {
+        // let sentElements = [];
+        //this.selectedBenefits.forEach(element => {
+        //let benefit = benefits [];
+        //console.log(product);
+        //});
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__benefits_benefits__["a" /* BenefitsPage */], { selectedBenefits: this.selectedBenefits });
+    };
     CardsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cards',template:/*ion-inline-start:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/cards/cards.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>כרטיסים</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n  <h3>Ionic Menu Starter</h3>\n\n\n  <button ion-button secondary menuToggle>פתח תפריט</button>\n<ion-content>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4>\n        <ion-grid>\n          <ion-row>\n\n            <img class="flat-image" src="assets/imgs/logo-small.png"/>\n\n\n          </ion-row>\n\n          <ion-row>\n\n             <div class="card-roling" >\n               \n                <div *ngFor="let benefit of benefits">\n                  <h3>This stuff should scroll.</h3>\n                </div>\n             </div>\n\n          </ion-row>\n        </ion-grid>\n      </ion-col> \n\n      <ion-col col-8>\n        <!--  header righ side-->\n        <ion-grid>\n          <ion-row>\n             <ion-col>\n                <h1> ברוכים הבאים לרשת פוקס</h1>\n             </ion-col>\n             <ion-col col-3><!-- place holder-->\n             </ion-col>\n             <ion-col col-3>\n              <img class="flat-image" src="assets/imgs/fox.png"/>\n             </ion-col>\n             \n          </ion-row>\n          <ion-row>\n            <ion-col col-3><!-- place holder-->\n             </ion-col>\n            <ion-col col-9>\n             <h3 float-left> בחר את המועדונים שברשותך להצגת כל ההטבות שלך</h3>\n             </ion-col>\n          </ion-row>\n        </ion-grid>\n        <!-- cards -->\n        <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">\n        <ion-grid >\n          <ion-row>\n\n            <ion-col col-3 *ngFor="let benefit of benefits, let i = index">\n\n              <div style="text-align: center; padding: 1px; background-color: #eee">\n                  <ion-card  id="card{{i}}" (click)="chooseCard(i)" >\n                  <!-- img src="assets/imgs/leumi-card.jpeg"/ -->\n                  <img class="card-image" src="assets/imgs/logo-small.png"/>\n\n                  <div class="card-title" id="cardTitle{{i}}" >{{benefit.club.name}}</div>\n                  <!-- div class="card-subtitle">{{benefit.description}}</div -->\n                   </ion-card>\n              </div>\n\n            </ion-col> \n\n          </ion-row>\n          \n        </ion-grid>\n      </ion-scroll>\n      <ion-row>\n        <ion-col col-3><!-- place holder-->\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button round outline>הצג מועדונים נוספים</button>\n        </ion-col>\n        <ion-col col-3><!-- place holder-->\n        </ion-col>\n      </ion-row>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/cards/cards.html"*/
+            selector: 'page-cards',template:/*ion-inline-start:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/cards/cards.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>כרטיסים</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n  <h3>Ionic Menu Starter</h3>\n\n\n  <button ion-button secondary menuToggle>פתח תפריט</button>\n<ion-content class="mainContent">>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4>\n        <ion-grid>\n          <ion-row>\n\n            <img class="flat-image" src="assets/imgs/logo-small.png"/>\n\n\n          </ion-row>\n\n          <ion-row>\n\n             <div class="card-roling" >\n               \n                <div *ngFor="let benefit of benefits">\n                  <h3>This stuff should scroll.</h3>\n                </div>\n             </div>\n\n          </ion-row>\n        </ion-grid>\n      </ion-col> \n\n      <ion-col col-8>\n        <!--  header righ side-->\n        <ion-grid>\n          <ion-row>\n             <ion-col>\n                <h1> ברוכים הבאים לרשת פוקס</h1>\n             </ion-col>\n             <ion-col col-3><!-- place holder-->\n             </ion-col>\n             <ion-col col-3>\n              <img class="flat-image" src="assets/imgs/fox.png"/>\n             </ion-col>\n             \n          </ion-row>\n          <ion-row>\n            <ion-col col-3><!-- place holder-->\n             </ion-col>\n            <ion-col col-9>\n             <h3 float-left> בחר את המועדונים שברשותך להצגת כל ההטבות שלך</h3>\n             </ion-col>\n          </ion-row>\n        </ion-grid>\n        <!-- cards -->\n        <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">\n        <ion-grid >\n          <ion-row>\n\n            <ion-col col-3 *ngFor="let benefit of benefits, let i = index">\n\n              <div style="text-align: center; padding: 1px; background-color: #eee">\n                  <ion-card  id="card{{i}}" (click)="chooseCard(i)" >\n                  <!-- img src="assets/imgs/leumi-card.jpeg"/ -->\n                  <img class="card-image" src="assets/imgs/logo-small.png"/>\n\n                  <div class="card-title" id="cardTitle{{i}}" >{{benefit.club.name}}</div>\n                  <!-- div class="card-subtitle">{{benefit.description}}</div -->\n                   </ion-card>\n              </div>\n\n            </ion-col> \n\n          </ion-row>\n          \n        </ion-grid>\n      </ion-scroll>\n      <ion-row>\n        <ion-col col-3><!-- place holder-->\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button round outline (click)="navigateToBenefits(user)">הראה לי את ההטבות שלי</button>\n        </ion-col>\n        <ion-col col-3><!-- place holder-->\n        </ion-col>\n      </ion-row>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/cards/cards.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
     ], CardsPage);
     return CardsPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=cards.js.map
@@ -191,9 +200,53 @@ var CardsPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BenefitsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(50);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BenefitsPage = (function () {
+    function BenefitsPage(navCtrl, navParams, restProvider) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.restProvider = restProvider;
+        this.selectedBenefits = navParams.get("selectedBenefits");
+        alert("selectedBenefits: " + this.selectedBenefits[0].club.name);
+    }
+    BenefitsPage.prototype.choosebenefit = function () {
+        alert("choosebenefit");
+    };
+    BenefitsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-benefits',template:/*ion-inline-start:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/benefits/benefits.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>ההטבות שלך</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n  <h3>Ionic Menu Starter</h3>\n\n\n  <button ion-button secondary menuToggle>פתח תפריט</button>\n<ion-content>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4>\n        <ion-grid>\n          <ion-row>\n\n            <img class="flat-image" src="assets/imgs/logo-small.png"/>\n\n\n          </ion-row>\n\n          <ion-row>\n\n             <div class="card-roling" >\n               \n                <div *ngFor="let benefit of selectedBenefits">\n                  <h3>This stuff should scroll.</h3>\n                </div>\n             </div>\n\n          </ion-row>\n        </ion-grid>\n      </ion-col> \n\n      <ion-col col-8>\n        <!--  header righ side-->\n        <ion-grid>\n          <ion-row>\n             <ion-col>\n                <h1> ברוכים הבאים לרשת פוקס</h1>\n             </ion-col>\n             <ion-col col-3><!-- place holder-->\n             </ion-col>\n             <ion-col col-3>\n              <img class="flat-image" src="assets/imgs/fox.png"/>\n             </ion-col>\n             \n          </ion-row>\n          <ion-row>\n            <ion-col col-3><!-- place holder-->\n             </ion-col>\n            <ion-col col-9>\n             <h3 float-left> בחר את המועדונים שברשותך להצגת כל ההטבות שלך</h3>\n             </ion-col>\n          </ion-row>\n        </ion-grid>\n        <!-- cards -->\n        <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">\n        <ion-grid >\n          <ion-row *ngFor="let benefit of selectedBenefits">\n\n              <div style="width: 100%;text-align: center;padding: 1px;background-color: #eee;">\n                  <ion-card (click)="chooseCard()">\n                  <!-- img src="assets/imgs/leumi-card.jpeg"/ -->\n                    <ion-grid >\n                      <ion-row>\n                        <ion-col col-6>\n                          <div class="card-title">{{benefit.description}}</div>\n                        </ion-col>\n                         <ion-col col-3>\n                          <div class="card-title">{{benefit.club.name}}</div>\n                        </ion-col>\n                        <ion-col col-3>\n                          <img class="card-image" src="assets/imgs/logo-small.png"/>\n                         </ion-col>\n                      </ion-row>\n                    \n                     </ion-grid>\n                  <!-- div class="card-subtitle">{{benefit.description}}</div -->\n                   </ion-card>\n              </div>\n\n          </ion-row>\n          \n        </ion-grid>\n      </ion-scroll>\n      <ion-row>\n        <ion-col col-3><!-- place holder-->\n        </ion-col>\n        <ion-col col-6>\n          <button ion-button round outline>חזור לבחירת מועדונים</button>\n        </ion-col>\n        <ion-col col-3><!-- place holder-->\n        </ion-col>\n      </ion-row>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n\n</ion-content>\n'/*ion-inline-end:"/Users/yshmulev/clubbook/clubbook-mobile-app/clubook-mobile/src/pages/benefits/benefits.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]])
+    ], BenefitsPage);
+    return BenefitsPage;
+}());
+
+//# sourceMappingURL=benefits.js.map
+
+/***/ }),
+
+/***/ 202:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(224);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -201,29 +254,31 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_cards_cards__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common_http__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_rest_rest__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_benefits_benefits__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_rest_rest__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -246,11 +301,12 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_cards_cards__["a" /* CardsPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */]
+                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_benefits_benefits__["a" /* BenefitsPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
@@ -261,13 +317,14 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_list_list__["a" /* ListPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_cards_cards__["a" /* CardsPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */]
+                __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_benefits_benefits__["a" /* BenefitsPage */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_11__providers_rest_rest__["a" /* RestProvider */]
+                __WEBPACK_IMPORTED_MODULE_12__providers_rest_rest__["a" /* RestProvider */]
             ]
         })
     ], AppModule);
@@ -278,13 +335,13 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 265:
+/***/ 266:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(199);
@@ -344,13 +401,13 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 279:
+/***/ 280:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -379,13 +436,13 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 280:
+/***/ 281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -436,7 +493,7 @@ var ListPage = (function () {
 
 /***/ }),
 
-/***/ 99:
+/***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -519,5 +576,5 @@ var RestProvider = (function () {
 
 /***/ })
 
-},[201]);
+},[202]);
 //# sourceMappingURL=main.js.map

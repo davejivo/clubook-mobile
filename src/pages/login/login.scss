@@ -1,4 +1,8 @@
 page-login {
+  
+  .mainContent {
+    background-color: color($colors, background, base);
+  }
 
   ion-login {
     position: relative;

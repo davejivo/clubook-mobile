@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CardsPage } from '../pages/cards/cards';
 import { LoginPage } from '../pages/login/login';
+import { BenefitsPage } from '../pages/benefits/benefits';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     ListPage,
     CardsPage,
-    LoginPage
+    LoginPage,
+    BenefitsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     ListPage,
     CardsPage,
-    LoginPage
+    LoginPage,
+    BenefitsPage  
   ],
   providers: [
     StatusBar,
