@@ -1,12 +1,14 @@
 {
   "name": "myApp",
-  "app_id": "a91b3488",
+  "app_id": "dfe650f5",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
   },
-  "proxies": [{
-    "path": "/api",
-    "proxyUrl": "https://fathomless-thicket-58677.herokuapp.com/api"
-  }]
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://fathomless-thicket-58677.herokuapp.com/api"
+    }
+  ]
 }
