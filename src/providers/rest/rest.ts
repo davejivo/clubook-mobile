@@ -10,9 +10,10 @@ import { Injectable } from '@angular/core';
 */
 @Injectable()
 export class RestProvider {
-	  //apiUrl = 'https://fathomless-thicket-58677.herokuapp.com/api/benefits?token=';
+	  //benefitsApiUrl = 'https://fathomless-thicket-58677.herokuapp.com/api/benefits?token=';
 	  //loginUrl = 'https://fathomless-thicket-58677.herokuapp.com/api/login';
-	  apiUrl = 'http://localhost:8100/api/benefits?token=';
+	  benefitsApiUrl = 'http://localhost:8100/api/benefits?token=';
+	  clubsApiUrl = 'http://localhost:8100/api/clubs?token=';
 	  loginUrl = 'http://localhost:8100/api/login';
 
   constructor(public http: HttpClient) {
@@ -27,8 +28,8 @@ export class RestProvider {
 
     
   	return new Promise(resolve => {
-  	   console.log('Hello call rest: ' + this.apiUrl+token);
-    	this.http.get(this.apiUrl+token,
+  	   console.log('Hello call rest: ' + this.benefitsApiUrl+token);
+    	this.http.get(this.benefitsApiUrl+token,
     	{headers: headers}
     )
     .subscribe(data => {
@@ -37,6 +38,26 @@ export class RestProvider {
       		console.log(err);
     	});
     });
+  }
+
+  getClubs(token){
+      let headers = new HttpHeaders();
+      headers.append('Accept', 'application/json');
+      headers.append('Access-Control-Allow-Origin', '*');
+      headers.append('Access-Control-Allow-Headers', '*');
+
+
+      return new Promise(resolve => {
+          console.log('Hello call rest: ' + this.clubsApiUrl+token);
+          this.http.get(this.clubsApiUrl+token,
+              {headers: headers}
+          )
+              .subscribe(data => {
+                  resolve(data);
+              }, err => {
+                  console.log(err);
+              });
+      });
   }
 
   login(username,password) {

@@ -9,6 +9,10 @@
     {
       "path": "/api",
       "proxyUrl": "https://fathomless-thicket-58677.herokuapp.com/api"
+    },
+    {
+      "path": "/resources/images",
+      "proxyUrl": "https://fathomless-thicket-58677.herokuapp.com/resources/images"
     }
   ]
 }
