@@ -13,107 +13,107 @@
 
 
 <button ion-button secondary menuToggle>פתח תפריט</button>
-<ion-content class="mainContent">>
-
+<ion-content class="mainContent">
+    <!--header grid-->
     <ion-grid>
         <ion-row>
+            <!--clubook logo-->
             <ion-col col-4>
-                <ion-grid>
-                    <ion-row>
-
-                        <img class="flat-image" src="assets/imgs/logo-small.png"/>
-
-
-                    </ion-row>
-
-                    <ion-row>
-
-                        <div class="card-roling" >
-                            <ion-slides  *ngIf="benefits && benefits.length" slidesPerView="4" speed="400"  autoplay="2000" direction="vertical">
-                                <ion-slide *ngFor="let benefit of benefits">
-                                    <h3>{{benefit.title}}</h3>
-                                    <h3>{{benefit.description}}</h3>
-                                </ion-slide>
-                            </ion-slides>
-
-                            <!--<ion-content>-->
-                                <!--<ion-list [virtualScroll]="items" approxItemHeight="40px" [virtualTrackBy]="customTrackBy">-->
-                                    <!--<ion-list-header>Follow us on Twitter</ion-list-header>-->
-                                    <!--<ion-item *virtualItem="let item">-->
-                                        <!--<ion-icon name="ionic" item-left></ion-icon>-->
-                                        <!--{{item}}-->
-                                    <!--</ion-item>-->
-                                <!--</ion-list>-->
-                            <!--</ion-content>-->
-
-                            <!--<div *ngFor="let benefit of benefits">-->
-                                <!--<h3>This stuff should scroll.</h3>-->
-                            <!--</div>-->
-                        </div>
-
-                    </ion-row>
-                </ion-grid>
+                <img style="width: 100%;" class="flat-image" src="assets/imgs/logo-small.png"/>
             </ion-col>
-
-            <ion-col col-8>
-                <!--  header righ side-->
-                <ion-grid>
-                    <ion-row>
-                        <ion-col>
-                            <h1> ברוכים הבאים לרשת פוקס</h1>
-                        </ion-col>
-                        <ion-col col-3><!-- place holder-->
-                        </ion-col>
-                        <ion-col col-3>
-                            <img class="flat-image" src="assets/imgs/fox.png"/>
-                        </ion-col>
-
-                    </ion-row>
-                    <ion-row>
-                        <ion-col col-3><!-- place holder-->
-                        </ion-col>
-                        <ion-col col-9>
-                            <h3 float-left> בחר את המועדונים שברשותך להצגת כל ההטבות שלך</h3>
-                        </ion-col>
-                    </ion-row>
-                </ion-grid>
-                <!-- cards -->
-                <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">
-                    <ion-grid >
-                        <ion-row>
-
-                            <ion-col col-3 *ngFor="let club of clubs, let i = index">
-
-                                <div style="text-align: center; padding: 1px; background-color: #eee">
-                                    <ion-card  id="card{{i}}" (click)="chooseCard(i)" >
-                                        <!-- img src="assets/imgs/leumi-card.jpeg"/ -->
-                                        <!--<img class="card-image" src="assets/imgs/logo-small.png"/>-->
-                                        <img class="card-image" src="assets/imgs/Logo/{{club.imageName}}"/>
-
-                                        <div class="card-title" id="cardTitle{{i}}" >{{club.name}}</div>
-                                        <div class="card-impMethod" id="cardImplementMethod{{i}}" >כרטיס: {{club.implementMethod}}</div>
-                                        <!-- div class="card-subtitle">{{benefit.description}}</div -->
-                                    </ion-card>
-                                </div>
-
-                            </ion-col>
-
-                        </ion-row>
-
-                    </ion-grid>
-                </ion-scroll>
-                <ion-row>
-                    <ion-col col-3><!-- place holder-->
-                    </ion-col>
-                    <ion-col col-6>
-                        <button ion-button round outline (click)="navigateToBenefits(user)">הראה לי את ההטבות שלי</button>
-                    </ion-col>
-                    <ion-col col-3><!-- place holder-->
-                    </ion-col>
-                </ion-row>
+            <!--clubook logo end-->
+            <!--header-->
+            <ion-col col-4>
+                <h1> ברוכים הבאים</h1>
+            </ion-col>
+            <!--header end-->
+            <ion-col col-4>
+                <img  class="flat-image user-image" src="assets/imgs/{{user.image}}"/>
             </ion-col>
         </ion-row>
     </ion-grid>
+    <!--header grid end-->
+    <!--clubs and commercials grid-->
+    <ion-grid>
+        <ion-row>
+        <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+            <div class="card-roling" >
+                <ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" slidesPerView="4" loop="true" speed="5000"  autoplay="10" direction="vertical">
+                    <ion-slide *ngFor="let benefit of rollerBenefits">
+                        <ion-item>
+                            <ion-avatar item-start>
+                                <img src="assets/imgs/Logo/{{benefit.club.imageName}}">
+                            </ion-avatar>
+                            <h2>{{benefit.title}}</h2>
+                            <p>{{benefit.description}}</p>
+                        </ion-item>
+                    </ion-slide>
+                </ion-slides>
+            </div>
 
+        </ion-col>
+            <!--clubs-->
+        <ion-col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 >
+            <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">
+                <ion-grid class="clubs-grid">
+                    <ion-row>
+                        <ion-col col-sm-4 col-md-3 col-6 *ngFor="let club of clubs, let i = index">
+                            <ion-card id="card{{i}}" (click)="chooseCard(i)">
+                            <ion-item class="card-header">
+                                <ion-avatar item-start>
+                                    <!--<img class="card-image" src="assets/imgs/Logo/{{club.imageName}}"/>-->
+                                    <img class="card-image" src="assets/imgs/logo.png"/>
+                                </ion-avatar>
+                                <h2 class="card-title" id="cardTitle{{i}}" >{{club.name}}</h2>
+                                <p class="card-impMethod" id="cardImplementMethod{{i}}" >כרטיס: {{club.implementMethod}}</p>
+                            </ion-item>
+
+                                <img class="card-image" src="assets/imgs/Logo/{{club.imageName}}">
+
+                                <ion-card-content>
+                                    <p>תיאור המועדון</p>
+                            </ion-card-content>
+                            </ion-card>
+                            <!--<ion-item id="card{{i}}" (click)="chooseCard(i)">-->
+                                <!--<ion-thumbnail item-start>-->
+                                    <!--<img class="" src="assets/imgs/Logo/{{club.imageName}}"/>-->
+                                <!--</ion-thumbnail>-->
+                                <!--<h2 class="" id="cardTitle{{i}}" >{{club.name}}</h2>-->
+                                <!--<p class="card-impMethod" id="cardImplementMethod{{i}}" >כרטיס: {{club.implementMethod}}</p>-->
+                                <!--&lt;!&ndash;<button ion-button clear item-end>View</button>&ndash;&gt;-->
+                            <!--</ion-item>-->
+                            <!--<div style="text-align: center;">-->
+                                <!--<ion-card class="club-card" style="border-radius: 100px" id="card{{i}}" (click)="chooseCard(i)" >-->
+                                    <!--&lt;!&ndash; img src="assets/imgs/leumi-card.jpeg"/ &ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img class="card-image" src="assets/imgs/logo-small.png"/>&ndash;&gt;-->
+                                    <!--<img class="card-image" src="assets/imgs/Logo/{{club.imageName}}"/>-->
+
+                                    <!--<div class="card-title" id="cardTitle{{i}}" >{{club.name}}</div>-->
+                                    <!--<div class="card-impMethod" id="cardImplementMethod{{i}}" >כרטיס: {{club.implementMethod}}</div>-->
+                                    <!--&lt;!&ndash; div class="card-subtitle">{{benefit.description}}</div &ndash;&gt;-->
+                                <!--</ion-card>-->
+                            <!--</div>-->
+
+                        </ion-col>
+
+                    </ion-row>
+
+                </ion-grid>
+            </ion-scroll>
+
+        </ion-col>
+        <!--clubook logo end-->
+        </ion-row>
+        <ion-row>
+            <!--<ion-col col-3>&lt;!&ndash; place holder&ndash;&gt;-->
+            <!--</ion-col>-->
+            <ion-col col-6>
+                <button ion-button round outline (click)="navigateToNextPage(user)">הראה לי את ההטבות שלי</button>
+            </ion-col>
+            <!--<ion-col col-3>&lt;!&ndash; place holder&ndash;&gt;-->
+            <!--</ion-col>-->
+        </ion-row>
+    </ion-grid>
+    <!--clubs and commercials grid end-->
 
 </ion-content>

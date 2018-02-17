@@ -45,7 +45,7 @@ export class LoginPage {
     .then(data => {
       this.token = data;
       console.log('response: ' + data);
-      this.navCtrl.push(CardsPage , {token:this.token});
+      this.navigateToCards();
     });
     
   }
@@ -66,6 +66,11 @@ export class LoginPage {
   }
 
 
-  
-
+    private navigateToCards() {
+        this.restProvider.getUser(this.token)
+            .then(data => {
+                this.user = data;
+                this.navCtrl.push(CardsPage , {user: this.user[0], token:this.token});
+            });
+    }
 }

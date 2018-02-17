@@ -14,6 +14,7 @@ export class RestProvider {
 	  //loginUrl = 'https://fathomless-thicket-58677.herokuapp.com/api/login';
 	  benefitsApiUrl = 'http://localhost:8100/api/benefits?token=';
 	  clubsApiUrl = 'http://localhost:8100/api/clubs?token=';
+	  userApiUrl = 'http://localhost:8100/api/user?token=';
 	  loginUrl = 'http://localhost:8100/api/login';
 
   constructor(public http: HttpClient) {
@@ -59,6 +60,26 @@ export class RestProvider {
               });
       });
   }
+
+  getUser(token){
+        let headers = new HttpHeaders();
+        headers.append('Accept', 'application/json');
+        headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Headers', '*');
+
+
+        return new Promise(resolve => {
+            console.log('Hello call rest: ' + this.userApiUrl+token);
+            this.http.get(this.userApiUrl+token,
+                {headers: headers}
+            )
+                .subscribe(data => {
+                    resolve(data);
+                }, err => {
+                    console.log(err);
+                });
+        });
+    }
 
   login(username,password) {
     let headers = new HttpHeaders();

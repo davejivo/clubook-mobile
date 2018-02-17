@@ -1,12 +1,7 @@
-page-cards {
-  
-   .mainContent {
-    background-color: color($colors, background, base);
-  }
+page-shops {
 
-  .user-image{
-    width: 200px; height: 200px; float: right;
-    border-radius: 100px;
+  .mainContent {
+    background-color: color($colors, background, base);
   }
 
   ion-scroll {
@@ -47,15 +42,13 @@ page-cards {
   ion-card {
     position: relative;
     text-align: center;
-
   }
-
 
   .card-roling {
     height: 200px;
     min-height: 400px;
     font-size: 2.0em;
-    width: 100%;
+    width: 80%;
     font-weight: bold;
     color: #111;
     background-color: inherit;
@@ -63,8 +56,8 @@ page-cards {
   }
 
   .card-image {
-    //width: 100%;
-    //height: 100%;
+    width: 100%;
+    height: 85px;
     //max-width: 145px;
     max-height: 85px;
     font-weight: bold;
@@ -72,17 +65,15 @@ page-cards {
     margin: auto;
   }
   .card-title {
-    //top: 36%;
-    //font-size: 1.0em;
-    //width: 100%;
+    top: 36%;
+    font-size: 1.0em;
+    width: 100%;
     font-weight: bold;
     color: #111;
   }
-  .card-header{
-    //background: #488aff;
-  }
+
   .card-subtitle {
-    font-size: 1.0em;  
+    font-size: 1.0em;
     top: 52%;
     width: 100%;
     color: #111;
