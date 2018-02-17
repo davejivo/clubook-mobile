@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ההטבות שלך</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+  <h3>Ionic Menu Starter</h3>
+
+
+  <button ion-button secondary menuToggle>פתח תפריט</button>
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-grid>
+          <ion-row>
+
+            <img class="flat-image" src="assets/imgs/logo-small.png"/>
+
+
+          </ion-row>
+
+          <ion-row>
+
+              <div class="card-roling" >
+                  <ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" slidesPerView="4" loop="true" speed="5000"  autoplay="10" direction="vertical">
+                      <ion-slide *ngFor="let benefit of rollerBenefits">
+                          <div class="card list">
+                              <div class = "item item-divider">
+                                  <h3>{{benefit.title}}</h3>
+                              </div>
+
+                              <div class = "item item-text-wrap">
+                                  <h3>{{benefit.description}}</h3>
+                              </div>
+
+                              <div class = "item item-divider">
+                                  <a href="{{benefit.link}}">הצג הטבה</a>
+                              </div>
+                          </div>
+
+
+                      </ion-slide>
+                  </ion-slides>
+              </div>
+
+          </ion-row>
+        </ion-grid>
+      </ion-col> 
+
+      <ion-col col-8>
+        <!--  header righ side-->
+        <ion-grid>
+          <ion-row>
+             <ion-col>
+                <h1> ברוכים הבאים לרשת פוקס</h1>
+             </ion-col>
+             <ion-col col-3><!-- place holder-->
+             </ion-col>
+             <ion-col col-3>
+              <img class="flat-image" src="assets/imgs/{{user.image}}"/>
+             </ion-col>
+             
+          </ion-row>
+          <ion-row>
+            <ion-col col-3><!-- place holder-->
+             </ion-col>
+            <ion-col col-9>
+             <h3 float-left>ההטבות שברשותך</h3>
+             </ion-col>
+          </ion-row>
+        </ion-grid>
+        <!-- benefits -->
+        <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">
+        <ion-grid>
+          <ion-row *ngFor="let benefit of benefits">
+              <div style="width: 100%;text-align: center;padding: 1px;background-color: #eee;">
+                  <ion-card (click)="chooseCard()">
+                  <!-- img src="assets/imgs/leumi-card.jpeg"/ -->
+                    <ion-grid>
+                      <ion-row>
+                        <ion-col col-9>
+                          <div class="card-title">{{benefit.description}}</div>
+                        </ion-col>
+                         <!--<ion-col col-3>-->
+                          <!--<div class="card-title">{{benefit.club.name}}</div>-->
+                        <!--</ion-col>-->
+                        <ion-col col-3>
+                          <!--<img class="card-image" src="assets/imgs/logo-small.png"/>-->
+                            <img class="card-image" src="assets/imgs/Logo/{{benefit.club.imageName}}"/>
+                         </ion-col>
+                      </ion-row>
+                    
+                     </ion-grid>
+                  <!-- div class="card-subtitle">{{benefit.description}}</div -->
+                   </ion-card>
+              </div>
+
+          </ion-row>
+          
+        </ion-grid>
+      </ion-scroll>
+      <ion-row>
+        <ion-col col-3><!-- place holder-->
+        </ion-col>
+        <!--<ion-col col-6>-->
+          <!--<button ion-button round outline>חזור לבחירת מועדונים</button>-->
+        <!--</ion-col>-->
+        <ion-col col-3><!-- place holder-->
+        </ion-col>
+      </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

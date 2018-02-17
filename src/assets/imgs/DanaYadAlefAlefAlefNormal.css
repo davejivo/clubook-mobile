@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DanaYadAlefAlefAlefNormal';
+    src: url('assets/imgs/fonts/DanaYadAlefAlefAlefNormal.eot');
+    src: url('assets/imgs/fonts/DanaYadAlefAlefAlefNormal.eot') format('embedded-opentype'),
+         url('assets/imgs/fonts/DanaYadAlefAlefAlefNormal.woff2') format('woff2'),
+         url('assets/imgs/fonts/DanaYadAlefAlefAlefNormal.woff') format('woff'),
+         url('assets/imgs/fonts/DanaYadAlefAlefAlefNormal.ttf') format('truetype'),
+         url('assets/imgs/fonts/DanaYadAlefAlefAlefNormal.svg#DanaYadAlefAlefAlefNormal') format('svg');
+}

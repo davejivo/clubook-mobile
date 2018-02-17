@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'comixno2clm_boldwebfont';
+    src: url('assets/imgs/fonts/comixno2clm_boldwebfont.eot');
+    src: url('assets/imgs/fonts/comixno2clm_boldwebfont.eot') format('embedded-opentype'),
+         url('assets/imgs/fonts/comixno2clm_boldwebfont.woff2') format('woff2'),
+         url('assets/imgs/fonts/comixno2clm_boldwebfont.woff') format('woff'),
+         url('assets/imgs/fonts/comixno2clm_boldwebfont.ttf') format('truetype'),
+         url('assets/imgs/fonts/comixno2clm_boldwebfont.svg#comixno2clm_boldwebfont') format('svg');
+}

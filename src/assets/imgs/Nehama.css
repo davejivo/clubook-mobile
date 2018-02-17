@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Nehama';
+    src: url('assets/imgs/fonts/Nehama.eot');
+    src: url('assets/imgs/fonts/Nehama.eot') format('embedded-opentype'),
+         url('assets/imgs/fonts/Nehama.woff2') format('woff2'),
+         url('assets/imgs/fonts/Nehama.woff') format('woff'),
+         url('assets/imgs/fonts/Nehama.ttf') format('truetype'),
+         url('assets/imgs/fonts/Nehama.svg#Nehama') format('svg');
+}

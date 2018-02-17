@@ -1,5 +1,7 @@
 page-shops {
 
+  //@font-face { font-family: Delicious; font-weight: bold; src: url('DanaYadAlefAlefAlef-Normal.otf');}
+
   .mainContent {
     background-color: color($colors, background, base);
   }
@@ -14,15 +16,6 @@ page-shops {
     justify-content: center;
   }
 
-  .flat-image {
-    width: 145px;
-    height: 85px;
-    max-width: 145px;
-    max-height: 85px;
-    font-weight: bold;
-    color: #111;
-  }
-
   h1 {
     font-size: 3.5rem;
     text-align: center;
@@ -32,7 +25,7 @@ page-shops {
   }
 
   h3 {
-    margin-top: 1rem;
+    //margin-top: 1rem;
     font-size: 2rem;
     text-align: left;
     padding: 0px;
@@ -40,38 +33,38 @@ page-shops {
   }
 
   ion-card {
-    position: relative;
+    //position: relative;
     text-align: center;
+    //margin: 0;
   }
 
-  .card-roling {
-    height: 200px;
-    min-height: 400px;
-    font-size: 2.0em;
-    width: 80%;
+
+  .card {
+    //height: 120px;
+    //max-height: 120px;
+    margin: auto auto;
+    width: 100%;
     font-weight: bold;
-    color: #111;
-    background-color: inherit;
+  }
+  .card img {
+    min-height: 100px;
+    max-height: 100px;
 
   }
 
   .card-image {
-    width: 100%;
-    height: 85px;
-    //max-width: 145px;
-    max-height: 85px;
+    //max-height: 85px;
     font-weight: bold;
     color: #111;
     margin: auto;
   }
   .card-title {
-    top: 36%;
-    font-size: 1.0em;
-    width: 100%;
+    //top: 36%;
+    //font-size: 1.0em;
+    //width: 100%;
     font-weight: bold;
     color: #111;
   }
-
   .card-subtitle {
     font-size: 1.0em;
     top: 52%;
@@ -97,4 +90,14 @@ page-shops {
     display: grid;
   }
 
+  /////
+  .box {
+    //width:40%;
+    //height:200px;
+    //float:left;
+    //background-color:white;
+    //margin:1px;
+    //border-radius:5px;
+    //padding: 10px;
+  }
 }

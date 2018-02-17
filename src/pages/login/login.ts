@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { CardsPage } from '../cards/cards';
+import { LoadingController } from 'ionic-angular';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginPage {
   companies: any;
   token: any;
 
-  constructor(public navCtrl: NavController, public restProvider: RestProvider) {
+  constructor(public loadingCtrl: LoadingController ,public navCtrl: NavController, public restProvider: RestProvider) {
   //	this.companies = [
   //    {code: "FOX"} , 
   //    {code: "ELEC"} , 
@@ -40,8 +41,8 @@ export class LoginPage {
 
   login (loginUser: any){
      this.user = loginUser;
-    console.log ("loginUser is user:" + loginUser.user + " password: " + loginUser.password) ;
-     this.restProvider.login(loginUser.user,loginUser.password)
+    console.log ("loginUser is user:" + loginUser.username + " password: " + loginUser.password) ;
+     this.restProvider.login(loginUser.username,loginUser.password)
     .then(data => {
       this.token = data;
       console.log('response: ' + data);
@@ -67,10 +68,18 @@ export class LoginPage {
 
 
     private navigateToCards() {
+        this.presentLoading();
         this.restProvider.getUser(this.token)
             .then(data => {
                 this.user = data;
                 this.navCtrl.push(CardsPage , {user: this.user[0], token:this.token});
             });
+    }
+    presentLoading() {
+        let loader = this.loadingCtrl.create({
+            content: "Please wait...",
+            duration: 3000
+        });
+        loader.present();
     }
 }
