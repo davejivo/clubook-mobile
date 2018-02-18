@@ -36,17 +36,17 @@
 <ion-content class="mainContent">
     <ion-grid class="mainContentGrid">
         <ion-row>
-        <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+        <ion-col class="roller" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
             <div class="card-roling" >
-                <h1 class="alert alert-success">מבצעים</h1>
-                <ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" slidesPerView="4" loop="true" speed="5000"  autoplay="10" direction="vertical">
-                    <ion-slide *ngFor="let benefit of rollerBenefits">
-                        <ion-item  class="box box3 shadow3">
+                <h1 class="sales-title">מבצעים</h1>
+                <ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" slidesPerView="4" loop="true" speed="5000" autoplay="10" direction="vertical">
+                    <ion-slide class="sale" *ngFor="let benefit of rollerBenefits">
+                        <ion-item  class="box">
                             <ion-avatar item-start>
                                 <img src="assets/imgs/Logo/{{benefit.club.imageName}}">
                             </ion-avatar>
-                            <h2>{{benefit.title}}</h2>
-                            <p>{{benefit.description}}</p>
+                            <h2 item-start>{{benefit.title}}</h2>
+                            <p style="color:black" item-start>{{benefit.description}}</p>
                         </ion-item>
                     </ion-slide>
                 </ion-slides>
@@ -54,12 +54,12 @@
 
         </ion-col>
             <!--clubs-->
-        <ion-col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 >
-            <h1 class="cards-title">בחר את המועדונים שברשותך</h1>
+        <ion-col class="right-col" col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 >
+            <h1 class="main-title">סמן את המועדונים שברשותך</h1>
             <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">
                 <ion-grid class="clubs-grid">
                     <ion-row>
-                        <ion-col class="box" col-sm-4 col-md-4 col-6 *ngFor="let club of clubs, let i = index">
+                        <ion-col class="" col-sm-4 col-md-4 col-6 *ngFor="let club of clubs, let i = index">
                             <!--<ion-card class="card" id="card{{i}}" (click)="chooseCard(i)">-->
                             <!--<ion-item class="card-header">-->
                                 <!--<ion-avatar item-start>-->

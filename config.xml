@@ -16,6 +16,7 @@
     <allow-navigation href="*://fathomless-thicket-58677.herokuapp.com/*" />
     <allow-intent href="*://localhost:8100/*" />
     <allow-navigation href="*://localhost:8100/*" />
+    <allow-navigation href="http://*/*" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="BackupWebStorage" value="none" />

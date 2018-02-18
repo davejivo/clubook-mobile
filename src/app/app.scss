@@ -18,7 +18,13 @@
     background-color: #eff3f7 !important;
 }
 
-.cards-title {
+ion-label{
+    color: black !important;
+}
+
+
+
+.main-title {
     //border: 1px solid #b67930;
     //border-radius: 20px;
     color: #31708f;
@@ -37,6 +43,8 @@
     font-family: comixno2clm_boldwebfont, sans-serif;
     //font-family: Nehama, sans-serif;
     background-color: #95b0c5;
+    //background: linear-gradient(to right, rgb(247, 151, 30), rgb(255, 210, 0));
+    //background: linear-gradient(to right, rgb(68, 160, 141), rgb(9, 54, 55));
     color: black;
     //text-shadow: 1px 2px #b67930;
     //text-shadow: 1px 2px white;
@@ -57,6 +65,18 @@
     width: 50px; height: 50px
 }
 
+.sales-title{
+    font-family: comixno2clm_boldwebfont, sans-serif;
+    //background-color: #dff0d8;
+    //background: linear-gradient(to right, rgb(68, 160, 141), rgb(9, 54, 55));
+   //border-color: #d6e9c6;
+    background: transparent;
+    padding: 15px;
+    /* margin-bottom: 20px; */
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+
 .flat-image {
     width: 145px;
     //height: 85px;
@@ -68,18 +88,26 @@
 .card-roling {
     height: 200px;
     min-height: 400px;
-    font-size: 2.0em;
-    width: 100%;
-    font-weight: bold;
-    color: #111;
-    background-color: inherit;
-
-
-    /////
-    h2{
-        color: black;
-    }
 
 }
 
+.roller{
+    background: url('../assets/imgs/fox.png');
+    //background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5px 20px 10px 20px;
+}
+
+.box{
+    padding: auto;
+    background: #ffffff00;
+    //background: linear-gradient(to right, rgba(255,0,0,0), rgb(4, 99, 77));
+    color: black;
+    height: 90px;
+    min-height: 90px;
+}
+
+.right-col{
+    padding: 5px 20px 10px 20px;
+}
 

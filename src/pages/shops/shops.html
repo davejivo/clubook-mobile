@@ -11,14 +11,14 @@
             </ion-buttons>
             <ion-title text-center>
                 <img class="logo flat-image" src="assets/imgs/logo-small.png"/>
-                <img style="width: 50px; height: 50px"  class="flat-image user-image" src="assets/imgs/{{user.image}}"/>
             </ion-title>
-            <ion-buttons end>
-                <button ion-button round outline (click)="navigateToNextPage(user)">המשך</button>
+            <img end style="width: 50px; height: 50px"  class="user-image" src="assets/imgs/{{user.image}}"/>
+            <!--<ion-buttons end>-->
+                <!--<button ion-button round outline (click)="navigateToNextPage(user)">המשך</button>-->
                 <!--<button ion-button icon-only color="royal" (click)="navigateToNextPage(user)">-->
                 <!--<ion-icon name="person-add"></ion-icon>-->
                 <!--</button>-->
-            </ion-buttons>
+            <!--</ion-buttons>-->
         </ion-toolbar>
 
 
@@ -74,7 +74,7 @@
             </ion-col>
             <!--clubs-->
             <ion-col col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 >
-                <h1 class="cards-title">מגיע לך הטבות! בחר אחת מהחנויות הבאות</h1>
+                <h1 class="main-title">מגיע לך הטבות! בחר אחת מהחנויות הבאות</h1>
                 <ion-scroll style="direction: rtl" scrollY="true" direction="xy" overflow-scroll="true">
                     <!--<ion-grid class="clubs-grid">-->
                         <!--<ion-row>-->
@@ -86,7 +86,7 @@
                                             <img src="assets/imgs/{{shop.image}}">
                                         </ion-thumbnail>
                                         <ion-icon name="pin" item-start large></ion-icon>
-                                        <span>{{shop.name}}</span>
+                                        <h2>{{shop.name}}</h2>
                                         <p item-right>{{shop.benefits.length}} הטבות</p>
                                         <!--<button ion-button clear item-end>View</button>-->
                                     </ion-item>

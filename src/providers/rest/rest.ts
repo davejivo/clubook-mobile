@@ -108,6 +108,7 @@ export class RestProvider {
 
       return new Promise(resolve => {
           console.log('login call rest post: ' + this.loginUrl);
+          // this.http.options()
           this.http.post(this.loginUrl,data, {headers: this.headers})
               .subscribe(data => {
                   resolve(data);
