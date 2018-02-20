@@ -1,7 +1,9 @@
 <!--<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">-->
 <!--<link rel="stylesheet" href="assets/imgs/DanaYadAlefAlefAlefNormal.css">-->
-<link rel="stylesheet" href="assets/imgs/comixno2clm_boldwebfont.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/imgs/comixno2clm_boldwebfont.css">
+<link rel="stylesheet" href="assets/animate.css">
 <ion-header>
     <ion-navbar>
             <ion-toolbar>
@@ -11,8 +13,8 @@
                     </button>
                 </ion-buttons>
                 <ion-title text-center>
-                    <img class="logo flat-image" src="assets/imgs/logo-small.png"/>
-                    <img style="width: 50px; height: 50px"  class="user-image" src="assets/imgs/{{user.image}}"/>
+                    <img class=" logo flat-image" src="assets/imgs/logo-small.png"/>
+                    <img style="width: 50px; height: 50px"  class="pulse animated infinite user-image" src="assets/imgs/{{user.image}}"/>
                 </ion-title>
                 <ion-buttons end>
                     <button ion-button round outline (click)="navigateToNextPage(user)">המשך</button>
@@ -38,24 +40,39 @@
         <ion-row>
         <ion-col class="roller" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
             <div class="card-roling" >
-                <h1 class="sales-title">מבצעים</h1>
-                <ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" slidesPerView="4" loop="true" speed="5000" autoplay="10" direction="vertical">
-                    <ion-slide class="sale" *ngFor="let benefit of rollerBenefits">
-                        <ion-item  class="box">
-                            <ion-avatar item-start>
-                                <img src="assets/imgs/Logo/{{benefit.club.imageName}}">
-                            </ion-avatar>
-                            <h2 item-start>{{benefit.title}}</h2>
-                            <p style="color:black" item-start>{{benefit.description}}</p>
-                        </ion-item>
+
+                <!--<span class="bounce animated infinite">-->
+                <h1 class="fadeIn animated infinite sales-title">מבצעים</h1>
+                <!--</span>-->
+                <ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" effect="slide" slidesPerView="4" loop="true" speed="5000" autoplay="10" direction="vertical">
+                <!--<ion-slides  *ngIf="rollerBenefits && rollerBenefits.length > 0" effect="cube" slidesPerView="4" loop="true" autoplay="10" direction="vertical">-->
+                    <ion-slide *ngFor="let benefit of rollerBenefits">
+                        <ion-card class="sale-card">
+                            <img src="assets/imgs/Logo/{{benefit.club.imageName}}">
+                            <ion-card-content>
+                                <ion-card-title>
+                                    {{benefit.title}}
+                                </ion-card-title>
+                                <p>
+                                    {{benefit.description}}
+                                </p>
+                            </ion-card-content>
+                        </ion-card>
+                        <!--<ion-item  class="box">-->
+                            <!--<ion-avatar item-start>-->
+                                <!--<img src="assets/imgs/Logo/{{benefit.club.imageName}}">-->
+                            <!--</ion-avatar>-->
+                            <!--<h2 item-start>{{benefit.title}}</h2>-->
+                            <!--<p style="color:black" item-start>{{benefit.description}}</p>-->
+                        <!--</ion-item>-->
                     </ion-slide>
                 </ion-slides>
             </div>
 
         </ion-col>
             <!--clubs-->
-        <ion-col class="right-col" col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 >
-            <h1 class="main-title">סמן את המועדונים שברשותך</h1>
+        <ion-col class="right-col" col-8 col-sm-12 col-md-8 col-lg-8 col-xl-8 >
+            <h1 class="bounceInRight animated main-title">סמן את המועדונים שברשותך</h1>
             <ion-scroll scrollY="true" direction="xy" overflow-scroll="true">
                 <ion-grid class="clubs-grid">
                     <ion-row>
@@ -126,4 +143,7 @@
     </ion-grid>
     <!--clubs and commercials grid end-->
 
+
+
 </ion-content>
+

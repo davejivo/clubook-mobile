@@ -40,8 +40,9 @@ export class LoginPage {
   }
 
   login (loginUser: any){
-     this.user = loginUser;
-    console.log ("loginUser is user:" + loginUser.username + " password: " + loginUser.password) ;
+      // this.user = null;
+      // this.user = loginUser;
+    // console.log ("loginUser is user:" + loginUser.username + " password: " + loginUser.password) ;
      this.restProvider.login(loginUser.username,loginUser.password)
     .then(data => {
       this.token = data;
@@ -71,14 +72,14 @@ export class LoginPage {
         this.presentLoading();
         this.restProvider.getUser(this.token)
             .then(data => {
-                this.user = data;
-                this.navCtrl.push(CardsPage , {user: this.user[0], token:this.token});
+                let user = data;
+                this.navCtrl.push(CardsPage , {user: user[0], token:this.token});
             });
     }
     presentLoading() {
         let loader = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 3000
+            content: "...אנא המתן",
+            duration: 1000
         });
         loader.present();
     }

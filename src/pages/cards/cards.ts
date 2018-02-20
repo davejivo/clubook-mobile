@@ -52,12 +52,15 @@ export class CardsPage {
                 return club.name == cardTitle.innerText;
             });
             this.selectedClubs.splice(selectedIndex, 1);
-            card.className = card.className.replace(" card-z-depth-5", "");
+            card.className = card.className.replace("card-z-depth-5", "");
+            card.className = card.className.replace("checked", "");
+            card.className = card.className.replace("tada animated ", "");
+
 
         } else {
             //alert ("chooseCard: " + index + " card: " +this.benefits [index].club.name);
             this.selectedClubs.push(this.clubs[index]);
-            card.className += ' card-z-depth-5';
+            card.className += ' card-z-depth-5' + ' tada animated checked';
         }
         //alert ("chooseCard: " + index + " card: " + card.className);
         // Found world

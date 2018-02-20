@@ -38,6 +38,10 @@ page-benefits {
     //margin: 0;
   }
 
+  //ion-thumbnail{
+  //  margin: 0 auto !important;
+  //  text-align: center;
+  //}
   .card-title {
     //top: 36%;
     //font-size: 1.0em;
@@ -50,6 +54,10 @@ page-benefits {
     top: 52%;
     width: 100%;
     color: #111;
+  }
+
+  ion-list img{
+    //width: 30px;
   }
 
 }

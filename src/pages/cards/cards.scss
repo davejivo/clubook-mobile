@@ -34,7 +34,7 @@ page-cards {
     margin: 0px;
   }
 
-  ion-card {
+  ion-scroll ion-card {
     //position: relative;
     text-align: center;
     margin: auto auto !important;
@@ -46,12 +46,31 @@ page-cards {
     padding-right: 20px;
   }
   .card {
-    height: 120px;
-    max-height: 120px;
+    //height: 120px;
+    //max-height: 120px;
     //margin: auto auto;
     font-weight: bold;
+    box-shadow: 1px 4px 8px rgba(0,0,0,.2);
+    //margin: 8px 16px 8px 0;
+    background-color: #fff;
+    transition: box-shadow .2s,transform .2s;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,.05);
+    //display: flex;
+    //padding: 0 24px;
+    //cursor: pointer;
   }
-  .card img {
+
+  .checked:after{
+    content: "\2713";
+    color: darkgreen;
+    position: absolute;
+    left: 1px;
+    top: 89px;
+  }
+
+
+  ion-scroll .card img {
     min-height: 85px;
     max-height: 85px;
 
